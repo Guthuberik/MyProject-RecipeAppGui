@@ -67,6 +67,22 @@ public class RecipeAppGUI extends Application {
         TestoButton.setOnAction(e -> displayResult("Тесто"));
         root.getChildren().addAll(TestoButton);
 
+        Button LapshaButton = new Button("Лапша");
+        LapshaButton.setOnAction(e -> displayResult("Лапша"));
+        root.getChildren().addAll(LapshaButton);
+
+        Button KashaButton = new Button("Каша");
+        KashaButton.setOnAction(e -> displayResult("Каша"));
+        root.getChildren().addAll(KashaButton);
+
+        Button PlovButton = new Button("Плов");
+        PlovButton.setOnAction(e -> displayResult("Плов"));
+        root.getChildren().addAll(PlovButton);
+
+        Button PizzaButton = new Button("Пицца");
+        PizzaButton.setOnAction(e -> displayResult("Пицца"));
+        root.getChildren().addAll(PizzaButton);
+
         portionsTextField = new TextField();
         portionsTextField.setPromptText("Введите количество порций");
 
@@ -180,6 +196,29 @@ public class RecipeAppGUI extends Application {
             ingredients.put("Соль", 150.0);
             ingredients.put("Дрожжи", 100.0);
             ingredients.put("Масло", 50.0);
+        }else if ("Лапша".equals(recipe)) {
+            ingredients.put("Макароны", 250.0);
+            ingredients.put("Соль", 50.0);
+            ingredients.put("Вода", 400.0);
+            ingredients.put("Картошка", 250.0);
+            ingredients.put("Мясо", 250.0);
+            ingredients.put("Морковь", 150.0);
+            ingredients.put("Капуста", 50.0);
+        }else if ("Каша".equals(recipe)) {
+            ingredients.put("Молоко", 250.0);
+            ingredients.put("Сахар", 150.0);
+            ingredients.put("Злаки", 100.0);
+            ingredients.put("Масло", 50.0);
+        }else if ("Плов".equals(recipe)) {
+            ingredients.put("Мясо", 250.0);
+            ingredients.put("Рис", 150.0);
+            ingredients.put("Соль", 100.0);
+            ingredients.put("Приправа", 50.0);
+        }else if ("Пицца".equals(recipe)) {
+            ingredients.put("Тесто", 250.0);
+            ingredients.put("Колбаса", 150.0);
+            ingredients.put("Сыр", 100.0);
+            ingredients.put("Кетчуп", 50.0);
         }
         return ingredients;
     }
